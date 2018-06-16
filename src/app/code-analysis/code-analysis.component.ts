@@ -12,11 +12,4 @@ export class CodeAnalysisComponent implements OnInit {
   ngOnInit() {
   }
 
-
-
-  function void populate(string value)
-  {
-
-  }
-
 }
