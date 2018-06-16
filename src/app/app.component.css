@@ -3,7 +3,7 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 50px;
+    font-size: 40px;
     margin: 4px 2px;
 }
 
@@ -32,3 +32,19 @@
 .next{
     background-color: #008CBA;
 }
+
+.step {
+  height: 20px;
+  width: 20px;
+  margin: 0 30px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
