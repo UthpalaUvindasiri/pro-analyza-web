@@ -1,7 +1,11 @@
 <div>
 
-  <label>Category of code segment: </label>
-  <select>
+  <div style="line-height:300%;">
+    <br>
+  </div>
+
+  <label class="label">Category of code segment: </label>
+  <select class="drop">
     <option value="0" disabled selected>--Select--</option>
     <option value="1">Class</option>
   </select>
@@ -10,8 +14,8 @@
     <br>
   </div>
 
-  <label>Quality standards required: </label>
-  <select>
+  <label class="label">Quality standards required: </label>
+  <select id="stds" class="drop">
     <option value="0" disabled selected>--Select--</option>
     <option value="1">Control structures</option>
     <option value="2">Operands and operators</option>
@@ -23,6 +27,14 @@
     <option value="8">Coupling</option>
   </select>
 
-  <button class="button add" onclick="populate(this.value)"> Add </button>
+  <button class="button add" on-click=this.populate()> Add </button>
+
+  <div style="line-height:300%;">
+    <br>
+  </div>
+
+  <div class="display">
+      <label *ngFor="let item of selected" class="selected"> {{item}}</label>
+  </div>
 
 </div>
