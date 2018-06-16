@@ -1,0 +1,34 @@
+.theme {
+    color: #008CBA;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 50px;
+    margin: 4px 2px;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 10px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 15px 6px;
+    cursor: pointer;
+    width: 140px;
+}
+
+.navi{
+   float: right;
+   float: bottom;
+}
+
+.previous{
+    background-color: #4CAF50;
+}
+
+.next{
+    background-color: #008CBA;
+}

@@ -1,0 +1,28 @@
+<div>
+
+  <label>Category of code segment: </label>
+  <select>
+    <option value="0" disabled selected>--Select--</option>
+    <option value="1">Class</option>
+  </select>
+
+  <div style="line-height:300%;">
+    <br>
+  </div>
+
+  <label>Quality standards required: </label>
+  <select>
+    <option value="0" disabled selected>--Select--</option>
+    <option value="1">Control structures</option>
+    <option value="2">Operands and operators</option>
+    <option value="3">LOC</option>
+    <option value="4">Exception handling</option>
+    <option value="5">Memory consumption</option>
+    <option value="6">Commented lines</option>
+    <option value="7">Blank lines</option>
+    <option value="8">Coupling</option>
+  </select>
+
+  <button class="button add" onclick="populate(this.value)"> Add </button>
+
+</div>
