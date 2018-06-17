@@ -16,13 +16,15 @@ import { HomeComponent } from './home/home.component';
 import { StepperUploadComponent } from './stepper-upload/stepper-upload.component';
 import { MatStepperModule } from '@angular/material';
 import { FileDropModule } from 'ngx-file-drop';
+import { CodeAnalysisComponent } from './code-analysis/code-analysis.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidenavcontentComponent,
     HomeComponent,
-    StepperUploadComponent    
+    StepperUploadComponent,
+    CodeAnalysisComponent    
   ],
   imports: [
     BrowserModule,

@@ -1,40 +1,40 @@
 <div>
-
-  <div style="line-height:300%;">
-    <br>
+  
+    <div style="line-height:300%;">
+      <br>
+    </div>
+  
+    <label class="label">Category of code segment: </label>
+    <select class="drop">
+      <option value="0" disabled selected>--Select--</option>
+      <option value="1">Class</option>
+    </select>
+  
+    <div style="line-height:300%;">
+      <br>
+    </div>
+  
+    <label class="label">Quality standards required: </label>
+    <select id="stds" class="drop">
+      <option value="0" disabled selected>--Select--</option>
+      <option value="1">Control structures</option>
+      <option value="2">Operands and operators</option>
+      <option value="3">LOC</option>
+      <option value="4">Exception handling</option>
+      <option value="5">Memory consumption</option>
+      <option value="6">Commented lines</option>
+      <option value="7">Blank lines</option>
+      <option value="8">Coupling</option>
+    </select>
+  
+    <button class="button add" on-click=this.populate()> Add </button>
+  
+    <div style="line-height:300%;">
+      <br>
+    </div>
+  
+    <div class="display">
+        <label *ngFor="let item of selected" class="selected"> {{item}}</label>
+    </div>
+  
   </div>
-
-  <label class="label">Category of code segment: </label>
-  <select class="drop">
-    <option value="0" disabled selected>--Select--</option>
-    <option value="1">Class</option>
-  </select>
-
-  <div style="line-height:300%;">
-    <br>
-  </div>
-
-  <label class="label">Quality standards required: </label>
-  <select id="stds" class="drop">
-    <option value="0" disabled selected>--Select--</option>
-    <option value="1">Control structures</option>
-    <option value="2">Operands and operators</option>
-    <option value="3">LOC</option>
-    <option value="4">Exception handling</option>
-    <option value="5">Memory consumption</option>
-    <option value="6">Commented lines</option>
-    <option value="7">Blank lines</option>
-    <option value="8">Coupling</option>
-  </select>
-
-  <button class="button add" on-click=this.populate()> Add </button>
-
-  <div style="line-height:300%;">
-    <br>
-  </div>
-
-  <div class="display">
-      <label *ngFor="let item of selected" class="selected"> {{item}}</label>
-  </div>
-
-</div>
