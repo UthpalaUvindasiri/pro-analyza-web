@@ -1,0 +1,83 @@
+<mat-horizontal-stepper [linear]="isLinear()" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Upload Source Code</ng-template>
+      <h2>Upload Source Code</h2>
+      <mat-form-field style="width: 47%;float:left;">
+        <input matInput placeholder="Developer User ID" formControlName="firstCtrl" required>
+      </mat-form-field>
+      <div style="width: 6%;float:left;"></div>
+      <mat-form-field style="width: 47%;float:right;">
+        <input matInput placeholder="Project Name" formControlName="firstCtrl" required>
+      </mat-form-field>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="center">
+        <file-drop headertext="Drop files here" (onFileDrop)="dropped($event)" 
+        (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)">
+            <span></span>
+        </file-drop>
+        <br>
+        <br>
+        <div class="upload-table">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Uploaded Files</th>
+                    </tr>
+                    <tr>
+                </thead>
+                <tbody class="upload-name-style">
+                    <tr *ngFor="let item of files; let i=index">
+                        <td>{{ item.relativePath }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div style="float: right">
+        <button mat-raised-button matStepperNext color="primary">Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Fill out your address</ng-template>
+      <h2>Code Analysis</h2>      
+      <mat-form-field style="width: 47%;float:left;">
+        <mat-select placeholder="Category of Code Segment" formControlName="secondCtrl" required>
+          <mat-option *ngFor="let seg of segs" [value]="seg.value">
+            {{ seg.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div style="width: 6%;float:left;"></div>
+      <mat-form-field style="width: 47%;float:right;">
+        <mat-select placeholder="Quality Standards Required" formControlName="secondCtrl" multiple required>
+          <mat-option *ngFor="let quality of qualities" [value]="quality.value">
+            {{ quality.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div>
+        <button style="float: left" mat-raised-button color="primary" matStepperPrevious>Back</button>
+        <button style="float: right" mat-raised-button color="primary" matStepperNext>Next</button>
+      </div>
+
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    You are now done.
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>
