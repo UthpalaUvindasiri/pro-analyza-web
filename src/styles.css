@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+.parallax { 
+    /*background-image: url("./assets/img/bgimg.jpg");*/
+    height: 500px; 
+    background-color: #111111;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
